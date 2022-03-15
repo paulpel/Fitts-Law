@@ -22,14 +22,14 @@ class Window(QMainWindow):
         self.counter = 0
         self.data = []
 
-        self.setGeometry(1920/2-win_width/2, 1080/2-win_height/2, win_width, win_height)
+        self.setGeometry(int(1920/2-win_width/2), int(1080/2-win_height/2), win_width, win_height)
         self.setWindowTitle("Fitts Law App")
 
         self.button = QPushButton("Start", self)
         self.button.setStyleSheet("background-color : #9CB380")
 
         self.button.setGeometry(
-            win_width/2-self.btn_width/2, win_height/2-self.btn_height/2, self.btn_width, self.btn_height)
+            int(win_width/2-self.btn_width/2), int(win_height/2-self.btn_height/2), self.btn_width, self.btn_height)
         self.button.clicked.connect(self.clickme)
 
         self.test_btn = QPushButton(self)
